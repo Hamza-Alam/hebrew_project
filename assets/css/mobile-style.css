@@ -1,0 +1,1016 @@
+:root {
+    --primary: #503E9D;
+    --title: #182135;
+    --whiteColor: #ffffff;
+    --paraText: #626264;
+    --lightPurple: #E5E2E8;
+    --saleColor: #F5A41A;
+    --categoryTextColor: #DB1580;
+}
+@font-face {
+    font-family: ploniRegular;
+    src: url("../fonts/Ploni-Regular.otf");
+}
+@font-face {
+    font-family: ploniMedium;
+    src: url("../fonts/Ploni-Medium.otf");
+}
+@font-face {
+    font-family: ploniBold;
+    src: url("../fonts/Ploni-Bold.otf");
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+li,
+span,
+button,
+hr,
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+select:focus,
+button:focus,
+input:focus {
+    outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: transparent;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #F2F2F2;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-22 {
+    font-size: 22px;
+}
+
+.common_title {
+    font-size: 16;
+    font-weight: 700;
+    color: var(--title);
+    font-family: ploniBold;
+}
+
+.box_shahdow {
+    box-shadow: 0px 6px 30px rgba(65, 84, 152, 0.08);
+}
+.flex-end{
+    justify-content: flex-end !important;
+}
+.align-center{
+    align-items: center;
+}
+.desktop_hide{
+    display: none;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgba(80, 62, 157, 0.1);;
+}
+body{
+    width: 360px;
+    background: #fff;
+    margin: auto;
+}
+.bg_color{
+    background: #F6F6F6;
+}
+main{
+    padding-bottom: 30px;
+}
+.modal{
+    top: initial;
+    border-radius: 15px 15px 0px 0px;
+    bottom: 50px;
+}
+.modal .modal-dialog{
+    margin: 0px;
+}
+/************* Header - CSS *************/
+.header_active{
+    position: sticky;
+    background-color: #fff;
+    top: 0px;
+    z-index: 99999;
+}
+header{
+    padding: 18px 14px;
+    position: relative;
+    overflow: hidden;
+}
+header ul{
+    display: flex;
+}
+header ul li{
+    margin-right: 22px;
+}
+header .mobile_menu{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background: #353039;
+    z-index: 99;
+    top: 60px;
+    left: 0px;
+    left: -500px;
+    transition: all .5s linear;
+}
+header .mobile_menu .mobile_list ul{
+    display: block;
+}
+header .mobile_menu .mobile_list ul li{
+    text-align: right;
+}
+header .mobile_menu .mobile_header{
+    text-align: right;
+    padding: 18px 14px;
+}
+header .mobile_menu .mobile_body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    padding: 80px 0px;
+}
+header .mobile_menu .mobile_body h4{
+    font-size: 16px;
+    font-family: ploniRegular;
+    color: var(--whiteColor);
+    margin-bottom: 40px;
+    text-align: right;
+}
+header .mobile_menu .mobile_body ul{
+    margin-bottom: 60px;
+}
+header .mobile_menu .mobile_body ul li{
+    padding-bottom: 20px;
+    margin: 0px;
+}
+header .mobile_menu .mobile_body ul li a{
+    font-size: 16px;
+    font-family: ploniRegular;
+    color: var(--whiteColor);
+}
+/************* Multiple - Category - CSS ***********/
+.categories{
+    margin: 15px 0px;
+}
+.categories .category_box{
+    text-align: center;
+}
+.categories .category_box .img_box{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--whiteColor);
+    border-radius: 50px;
+    margin: auto;
+}
+.categories ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.categories ul li{
+    width: 20%;
+}
+.categories ul li p{
+    font-family: ploniRegular;
+}
+/************* Promotion - CSS ***********/
+.promotion{
+    margin: 15px 0px;
+}
+.promotion .multiple_promotion,
+.deals .multiple_deals{
+    display: flex;
+    overflow: hidden;
+    direction: rtl;
+}
+.promotion .multiple_promotion .promotion_box{
+    max-width: 210px;
+    background-color: var(--whiteColor);
+    padding: 8px;
+    border-radius: 12px;
+    direction: ltr;
+    margin: 10px 0px 10px 10px;
+}
+.promotion .multiple_promotion .promotion_box .promotion_img_box{
+    position: relative;
+}
+.promotion .multiple_promotion .promotion_box .promotion_img_box span{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    background: var(--saleColor);
+    border-radius: 10px;
+    color: var(--whiteColor);
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .time_category_text,
+.promotion .multiple_promotion .promotion_box .promotion_content .price_learn_more{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .time_category_text .time_div p span{
+    background: #353039;
+    border-radius: 2px;
+    color: var(--whiteColor);
+    padding: 1px 2px;
+    font-family: ploniMedium;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .time_category_text .promotion_category,
+.deals .multiple_deals .deals_box .content_div .deal_category,
+.product_detail .product_category span{
+    background: #F9E7F1;
+    border-radius: 15px 0px 0px 15px;
+    padding: 5px 7px;
+    color: var(--categoryTextColor);
+    font-family: ploniRegular;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .promotion_title{
+    margin: 6px 0px;
+    font-family: ploniBold;
+    line-height: 16px;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .price_learn_more a{
+    direction: rtl;
+    background-color: var(--categoryTextColor);
+    color: var(--whiteColor);
+    border-radius: 10px;
+    padding: 5px;
+    font-family: ploniBold;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .price_learn_more p{
+    font-family: ploniMedium;
+}
+.promotion .multiple_promotion .promotion_box .promotion_content .price_learn_more p span,
+.deals .deals_box .content_div .rating_price_div p span{
+    text-decoration: line-through;
+    font-family: ploniRegular;
+}
+.promotion .multiple_promotion,
+.deals .multiple_deals{
+    position: relative;
+    right: 15px;
+}
+.promotion .slider_div,
+.deals .slider_div{
+    overflow: hidden;
+}
+
+
+
+
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box{
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 12px;
+    background-color: var(--whiteColor);
+    margin: 10px 0px;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box img{
+    border-radius: 0px 12px 12px 0px;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div{
+    text-align: right;
+    padding: 11px 15px;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div .category{
+    padding: 5px 7px;
+    color: var(--categoryTextColor);
+    border-radius: 15px;
+    background: #F9E7F1;
+    font-family: ploniRegular;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div  h4{
+    margin: 7px 0px;
+    font-family: ploniBold;
+    line-height: 16px;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div p,
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div span{
+    font-family: ploniRegular;
+}
+.affordable_consumption .affordable_consumption_list .affordable_consumption_box .content_div span i{
+    color: var(--categoryTextColor);
+    font-size: 10px;
+}
+.affordable_consumption .affordable_consumption_list  .learn_more{
+    float: right;
+    direction: rtl;
+    color: #2B004F;
+    font-family: ploniRegular;
+}
+.affordable_consumption .header_cloth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.affordable_consumption .slider_div{
+    margin-bottom: 10px;
+}
+.affordable_consumption .slider_div img{
+    width: 100%;
+}
+/************** Deals - CSS ***********************/
+.deals{
+    margin: 15px 0px;
+}
+.deals .multiple_deals .deals_box{
+    padding: 12px;
+    border-radius: 12px;
+    background-color: var(--whiteColor);
+    max-width: 130px;
+    margin: 10px 0px 10px 10px;
+    direction: ltr;
+}
+.deals .multiple_deals .deals_box .content_div{
+    padding: 12px 0px 0px;
+    text-align: right;
+}
+.deals .multiple_deals .deals_box .content_div span{
+    color: var(--categoryTextColor);
+}
+.deals .multiple_deals .deals_box .content_div .title{
+    margin: 6px 0px;
+    font-family: ploniBold;
+}
+.deals .multiple_deals .deals_box .content_div .rating_price_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deals .multiple_deals .deals_box .content_div .rating_price_div p{
+    font-family: ploniMedium;
+}
+.deals .multiple_deals .deals_box .content_div .rating_price_div .rating_text{
+    font-size: 12px;
+    font-family: ploniRegular;
+}
+.deals .multiple_deals .deals_box .content_div .rating_price_div .rating_text i{
+    color: #F5A41A;
+}
+/************** Hot - Flashes - CSS ***********************/
+.hot_flashes{
+    margin-top: 30px;
+    background: rgba(80, 62, 157, 0.1);
+}
+.hot_flashes .annoucment_text{
+    background: linear-gradient(270deg, #DB1580 6.7%, #F5A41A 93.3%);
+    border-radius: 30px 0px 0px 30px;
+    padding: 12px 17px;
+    position: relative;
+    float: right;
+    top: -22px;
+    color: var(--whiteColor);
+    font-family: ploniBold;
+}
+.hot_flashes .annoucment_text img{
+    margin-left: 10px;
+}
+.hot_flashes .hot_flashes_list{
+    padding: 33px 15px 15px;
+}
+.hot_flashes .hot_flashes_list ul{
+    margin: 15px 0px;
+}
+.hot_flashes .hot_flashes_list ul li{
+    text-align: right;
+    display: flex;
+    direction: rtl;
+    margin-bottom: 15px;
+}
+.hot_flashes .hot_flashes_list ul li .img_box img{
+    border-radius: 100%;
+    width: 58px;
+    height: 40px;
+}
+.hot_flashes .hot_flashes_list ul li .flashes_comment{
+    padding: 12px;
+    background-color: var(--whiteColor);
+    border-radius: 12px 0px 12px 12px;
+    margin-right: 20px;
+    font-family: ploniRegular;
+}
+.hot_flashes .more_flashes{
+    direction: rtl;
+    color: #2B004F;
+    font-family: ploniRegular;
+}
+/*************** Footer - CSS ***************/
+footer{
+    position: sticky;
+    bottom: 0px;
+    z-index: 9999999999;
+}
+footer .footer_list{
+    background: var(--whiteColor);
+    border-radius: 20px 20px 0px 0px;
+    padding: 15px 39px;
+   
+}
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer ul li{
+    position: relative;
+}
+footer ul li .footer_item{
+    text-align: center;
+}
+footer ul li .footer_item img{
+    margin-bottom: 5px;
+}
+footer ul li a,
+footer ul li a:hover{
+    color: #353039;
+}
+footer ul li .footer_item p{
+    font-family: ploniRegular;
+}
+footer ul li.active .footer_item p{
+    color: var(--categoryTextColor);
+    font-family: ploniMedium;
+}
+footer ul li.active:before {
+    content: "";
+    width: 5px;
+    height: 3px;
+    position: absolute;
+    background: var(--categoryTextColor);
+    border-radius: 100%;
+    left: 42%;
+    top: -6px;
+}
+/************* Article - CSS ********************/
+.slider_div{
+    overflow: hidden;
+}
+.article_slider .slider_div .multiple_articles{
+    position: relative;
+}
+.article_slider .slider_div .swiper-pagination{
+    text-align: right;
+    direction: rtl;
+    padding-right: 20px;
+}
+.article_slider .slider_div .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    background-color: var(--whiteColor);
+    opacity: 1 !important;
+}
+.article_slider .slider_div .swiper-pagination-bullet-active{
+    width: 16px !important;
+    height: 6px !important;
+    border-radius: 10px !important;
+    background-color: var(--saleColor) !important;
+}
+.article_slider .slider_div .swiper-wrapper{
+    height: auto;
+}
+/************* Article - Detail - CSS ************/
+.article_detail{
+    padding: 22px 0px;
+    background-color: var(--whiteColor);
+    border-radius: 0px 0px 15px 15px;
+}
+.article_detail .article_category{
+    font-family: ploniBold;
+    color: var(--categoryTextColor);
+}
+.article_detail .article_title{
+    font-size: 30px;
+    font-family: ploniBold;
+    line-height: 32px;
+}
+.article_detail .article_description{
+    font-family: ploniRegular;
+    color: #353039;
+}
+.article_detail .city_shoe{
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    margin: 15px 0px;
+    border-top: 1px solid rgba(80, 62, 157, 0.1);
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(80, 62, 157, 0.1);
+}
+.article_detail .city_shoe p{
+    margin-right: 13px;
+    font-family: ploniRegular;
+    letter-spacing: 2px;
+}
+.article_detail .article_detail_para p{
+    text-align: right;
+    margin-bottom: 25px;
+    font-family: ploniRegular;
+}
+.article_detail .article_like{
+    border-top: 1px solid var(--categoryTextColor);
+    border-bottom: 1px solid var(--categoryTextColor);
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+.article_detail .article_like h4{
+    font-family: ploniMedium;
+    text-align: right;
+    direction: rtl;
+}
+.article_detail .multiple_shoe ul{
+    display: flex;
+    justify-content: flex-end;
+}
+.article_detail .multiple_shoe ul li{
+    background: #F9E7F1;
+    border-radius: 15px;
+    padding: 5px 7px;
+    color: var(--categoryTextColor);
+    margin-left: 6px;
+    font-family: ploniRegular;
+}
+.stand_brand_message{
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    padding: 15px 0px;
+}
+.stand_brand_message img{
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 20px;
+}
+.stand_brand_message a{
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    font-family: ploniBold;
+    padding: 10px;
+    color: #353039;
+    margin-left: 20px;
+}
+.sign_up_div{
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    background: var(--whiteColor);
+    border-radius: 15px;
+    padding: 14px;
+}
+.sign_up_div p{
+    text-align: right;
+    font-family: ploniMedium;
+    margin-right: 12px;
+}
+.sign_up_div p a{
+    color: var(--categoryTextColor);
+}
+.post_comment{
+    margin: 18px 0px;
+}
+.post_comment .total_comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post_comment .total_comment p i {
+    color: var(--saleColor);
+}
+.post_comment .comment_hearder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.post_comment .comment_hearder a{
+    font-family: ploniBold;
+    background-color: var(--categoryTextColor);
+    color: var(--whiteColor);
+    padding: 15px;
+    border-radius: 10px;
+}
+.post_comment .comment_hearder .anonymous_text{
+    font-family: ploniRegular;
+}
+.post_comment .comment_hearder .anonymous_text span{
+    background-color: var(--whiteColor);
+    color: var(--categoryTextColor);
+    padding: 4px 6px;
+    border-radius: 2px;
+}
+.post_comment .comment_list{
+    margin: 20px 0px;
+}
+.post_comment .comment_list ul li{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(80, 62, 157, 0.1);
+    padding: 10px 0px;
+}
+.post_comment .comment_list ul li .user_detail{
+    text-align: right;
+}
+.post_comment .comment_list ul li .user_detail h4,
+.post_comment .comment_list .add_comment{
+    font-family: ploniBold;
+}
+.post_comment .comment_list ul li .user_detail p{
+    font-family: ploniRegular;
+}
+.post_comment .total_comment p{
+    text-align: right;
+    font-family: ploniBold;
+}
+.post_comment .total_comment p  span{
+    font-family: ploniRegular;
+    margin-right: 5px;
+}
+.post_comment form{
+    margin: 15px 0px;
+}
+.post_comment form input{
+    width: 100%;
+    border: none;
+    padding: 10px 8px;
+    font-family: ploniRegular;
+}
+/************* Modal - CSS ***********************/
+.modal .modal-header{
+    border: none;
+}
+.modal .modal-body ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 70%;
+    margin: auto;
+}
+.modal .modal-body .copy_input{
+    width: 100%;
+    max-width: 70%;
+    position: relative;
+    margin: 15px auto 24px;
+}
+.modal .modal-body .copy_input input{
+    background: #F6F6F6;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    padding: 12px 30px;
+}
+.modal .modal-body .copy_input i{
+    position: absolute;
+    top: 16px;
+    left: 8px;
+}
+/************* Wallet - CSS **********************/
+main .main-wrapper .main_wallet_div{
+    text-align: center;
+    padding: 0px 20px;
+}
+main .main-wrapper .main_wallet_div h3{
+    background: linear-gradient(267.72deg, #DB1580 16.93%, #F5A41A 87.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-family: ploniBold;
+    margin: 5px 0px;
+}
+main .main-wrapper .points_div{
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0px;
+}
+main .main-wrapper .points_div ul{
+    text-align: right;
+}
+main .main-wrapper .points_div ul li i{
+    margin-left: 10px;
+    padding-top: 10px;
+}
+main .main-wrapper .points_div .total_points{
+    font-size: 20px;
+    font-family: ploniMedium;
+}
+main .main-wrapper .wallet_promotion .price_learn_more p img{
+    width: 20px;
+}
+main .main-wrapper .wallet_promotion .price_learn_more a{
+    padding: 5px 15px !important;
+}
+/************* Product - CSS *********************/
+.product_detail{
+    background: #FFFFFF;
+    border-radius: 0px 0px 15px 15px;
+    padding: 30px 0px;
+}
+.product_detail .product_price p{
+    font-size: 24px;
+    font-family: ploniMedium;
+}
+
+.product_detail .product_price p span{
+    font-family: ploniRegular;
+    text-decoration: line-through;
+}
+.product_category_div{
+    display: flex;
+    padding: 0px 15px;
+    justify-content: space-between;
+}
+.product_detail .more_detail_for_purchase{
+    width: 55%;
+    text-align: center;
+}
+.product_detail .more_detail_for_purchase a{
+    padding: 15px 0px;
+    background-color: var(--categoryTextColor);
+    color: var(--whiteColor);
+    font-family: ploniBold;
+    display: block;
+    border-radius: 10px;
+    direction: rtl;
+}
+.product_detail .choose_size{
+    width: 40%;
+    text-align: center;
+}
+.product_detail .choose_size a{
+    padding: 15px 0px;
+    border: 1px solid #C4C4C4;
+    color: var(--paraText);
+    font-family: ploniBold;
+    display: block;
+    direction: rtl;
+    border-radius: 10px;
+}
+.product_detail  .product_description{
+    direction: rtl;
+    text-align: right;
+    margin: 17px 0px;
+}
+.product_detail  .product_description p{
+    font-family: ploniRegular;
+}
+.product_detail  .product_description p b{
+    font-family: ploniBold;
+}
+/************* Message - CSS *********************/
+.announcement_list{
+    margin: 25px 0px;
+}
+.announcement_list .archive_div{
+    border-top: 1px solid #E8E6EE;
+    padding: 15px 0px;
+}
+.announcement_list .archive_div h3{
+    font-family: ploniBold;
+}
+.announcement_list .archive_div h3 img{
+    margin-left: 10px;
+}
+.announcement_list .archive_list{
+    margin-bottom: 50px;
+}
+.announcement_list .archive_list .alarm_coins_div,
+.announcement_list .archive_list .pin_coins_div{
+    display: flex;
+    direction: ltr;
+    align-items: center;
+}
+.announcement_list .archive_list .alarm_coins_div .alarm_disable,
+.announcement_list .archive_list .pin_coins_div .pin_disable{
+    background-color: transparent;
+    margin-left: 10px;
+}
+.announcement_list ul li{
+    display: flex;
+    direction: rtl;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E8E6EE;
+    padding: 20px 0px;
+}
+.announcement_list ul li .announcement_detail{
+    display: flex;
+    align-items: center;
+}
+.announcement_list ul li .announcement_detail img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+.announcement_list ul li .announcement_detail .annoucment_content{
+    text-align: right;
+}
+.announcement_list ul li .announcement_detail .annoucment_content h5{
+    font-family: ploniBold;
+    margin-bottom: 8px;
+}
+.announcement_list ul li .announcement_detail .annoucment_content h5 i,
+header.inbox_header .inbox_header_content p i{
+    color: #56BFCF;
+    margin-right: 8px;
+}
+.announcement_list ul li .announcement_detail .annoucment_content p{
+    font-family: ploniRegular;
+}
+.announcement_list ul li .timing_coins_div span{
+    width: 20px;
+    height: 20px;
+    background: var(--saleColor);
+    color: var(--whiteColor);
+    display: block;
+    border-radius: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 7px;
+}
+/************* Message - Inbox - CSS *************/
+header.inbox_header{
+    background-color: var(--whiteColor);
+    padding: 10px 14px;
+    position: relative;
+}
+header.inbox_header .inbox_header_content{
+    display: flex;
+    align-items: center;
+    direction: rtl;
+}
+header.inbox_header .inbox_header_content img{
+    margin: 0px 13px;
+}
+header.inbox_header .inbox_header_content p{
+    font-family: ploniBold;
+}
+header.inbox_header .inbox_header_content a {
+    color: #000;
+}
+header.inbox_header  .drop_down_icon{
+    padding: 8px 18px;
+    position: relative;
+    right: 15px;
+}
+header.inbox_header  .drop_down_icon.active{
+    background-color: #F6F6F6;
+    border-radius: 100%;
+}
+header .drop_down_menu{
+    width: 230px;
+    position: absolute;
+    top: 31px;
+    background: #fff;
+    left: -13px;
+    border-radius: 0px 0px 20px 0px;
+    opacity: 0;
+    z-index: -1;
+    transition: all .5s linear;
+}
+header .drop_down_menu.show{
+    opacity: 1;
+    z-index: 999;
+}
+header .drop_down_menu ul{
+    display: block;
+}
+header .drop_down_menu ul li{
+    direction: rtl;
+    text-align: right;
+    margin: 0px;
+}
+header .drop_down_menu ul li a{
+    font-family: ploniRegular;
+    color: #353039;
+    display: block;
+    padding: 10px 20px;
+}
+header .drop_down_menu ul li a:hover{
+    background: #F6F6F6;
+}
+.message_list{
+    padding: 15px 10px;
+}
+.message_list .common_message{
+    padding: 11px 14px;
+    background-color: var(--whiteColor);
+    border-radius: 15px 0px 15px 15px;
+    margin-bottom: 15px;
+}
+.message_list .sending_message{
+    margin-left: 50px;
+}
+.message_list .common_message .text_message{
+    text-align: right;
+    font-family: ploniRegular;
+    color: #353039;
+}
+.message_list .common_message .time{
+    color: #C4C4C4;
+}
+.message_list .reciving_message{
+    background-color: #FFE1F1 !important;
+    border-radius: 0px 15px 15px 15px !important;
+    margin-right: 50px;
+}
+footer .inbox_footer{
+    background-color: var(--whiteColor);
+    padding: 17px 0px;
+}
+footer .inbox_footer .message_form form{
+    margin: 0px;
+}
+footer .inbox_footer .message_form .input_div_button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .inbox_footer .message_form .input_div_button input{
+    direction: rtl;
+    background: #F6F6F6;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    width: 80%;
+    font-family: ploniRegular;
+}
+footer .inbox_footer .message_form .input_div_button button{
+    background-color: var(--categoryTextColor);
+    padding: 16px 14px;
+    border-radius: 100%;
+    border: none;
+}
+/************* Media - Query - CSS ***************/
+@media screen and (max-width: 580px) {
+    body{
+        width: 100%;
+    }
+}
