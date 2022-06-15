@@ -134,10 +134,13 @@ body{
     margin: auto;
 }
 .bg_color{
-    background: #F6F6F6;
+    background: #353039;
+    position: relative;
+    height: 100%;
 }
 main{
     padding-bottom: 30px;
+    background: #F6F6F6;
 }
 .modal{
     top: initial;
@@ -146,6 +149,20 @@ main{
 }
 .modal .modal-dialog{
     margin: 0px;
+}
+.main_page{
+    transition: all .5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    right: 0px;
+    top: 0px;
+}
+.main_page.changed_position{
+    right: 70%;
+    top: 9%;
+    height: 84%;
+    overflow: hidden;
+    border-radius: 20px;
 }
 /************* Header - CSS *************/
 .header_active{
@@ -157,7 +174,7 @@ main{
 header{
     padding: 18px 14px;
     position: relative;
-    overflow: hidden;
+    background-color: #F6F6F6;
 }
 header ul{
     display: flex;
@@ -211,9 +228,199 @@ header .mobile_menu .mobile_body ul li a{
     font-family: ploniRegular;
     color: var(--whiteColor);
 }
+.mobile_side_menu{
+    text-align: right;
+    padding: 75px 25px;
+}
+.mobile_side_menu h4{
+    font-size: 20px;
+    font-family: ploniBold;
+    color: var(--whiteColor);
+}
+.mobile_side_menu .auth_button{
+    margin: 30px 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mobile_side_menu .auth_button a {
+    display: block;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.mobile_side_menu .auth_button .enrollemnt_button{
+    background-color: var(--categoryTextColor);
+    border: none;
+}
+.mobile_side_menu .mobile_menu_list li{
+    margin-top: 50px;
+}
+.mobile_side_menu .mobile_menu_list li a img{
+    margin-left: 25px;
+}
+.mobile_side_menu .mobile_menu_list li a{
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+/************* Enrollemnt - Modal - Css ************/
+#enrollmentModal{
+    height: 100%;
+    bottom: 0px;
+}
+#enrollmentModal .modal-dialog{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 90%;
+    height: 80%;
+    overflow: scroll;
+}
+#enrollmentModal .modal-content{
+    border-radius: 20px;
+    height: 100%;
+    overflow: scroll;
+}
+#enrollmentModal .modal-title{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    font-family: ploniBold;
+    background: linear-gradient(267.72deg, #DB1580 16.93%, #F5A41A 87.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#enrollmentModal .modal-header button{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    padding: 6px 9px;
+    border-radius: 100%;
+    background: #353039;
+    opacity: 1;
+    color: #fff;
+    font-size: 14px;
+}
+#enrollmentModal .formDiv .inputDiv{
+    text-align: right;
+    margin-bottom: 20px;
+}
+#enrollmentModal .formDiv .inputDiv label{
+    font-family: ploniBold;
+}
+#enrollmentModal .formDiv .inputDiv input,
+#enrollmentModal .formDiv .inputDiv select{
+    width: 100%;
+    background: #F6F6F6;
+    border: none;
+    padding: 10px;
+    text-align: right;
+    font-family: ploniRegular;
+    font-size: 14px;
+}
+#enrollmentModal .formDiv .inputDiv .password_div{
+    position: relative;
+}
+#enrollmentModal .formDiv .inputDiv .password_div i{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+#enrollmentModal .formDiv .checkBox_div{
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 15px;
+}
+#enrollmentModal .formDiv .checkBox_div label{
+    font-family: ploniRegular;
+}
+#enrollmentModal .formDiv .checkBox_div label a{
+    color: var(--categoryTextColor);
+    text-decoration: underline;
+}
+#enrollmentModal .formDiv button{
+    width: 100%;
+    background-color: var(--categoryTextColor);
+    color: var(--whiteColor);
+    font-family: ploniBold;
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: none;
+}
+#enrollmentModal .signup_btn{
+    display: flex;
+    justify-content: center;
+}
+#enrollmentModal .signup_btn a {
+    display: block;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 6px;
+}
+#enrollmentModal .sign_up_with{
+    margin-top: 30px;
+}
+#enrollmentModal .sign_up_with h6{
+    margin-bottom: 15px;
+}
+#enrollmentModal .formDiv .checkBox_div input[type="checkbox"]:checked + label::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 6px;
+    background: rgba(0, 0, 0, 0);
+    top: 9px;
+    right: 3px;
+    border: 2px solid var(--categoryTextColor);
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+ }
+ 
+ #enrollmentModal .formDiv .checkBox_div input[type="checkbox"] {
+    line-height: 2.1ex;
+ }
+ 
+#enrollmentModal .formDiv .checkBox_div input[type="radio"],
+#enrollmentModal .formDiv .checkBox_div input[type="checkbox"] {
+     position: absolute;
+     left: -999em;
+ }
+ 
+#enrollmentModal .formDiv .checkBox_div input[type="checkbox"] + label {
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+ }
+ 
+#enrollmentModal .formDiv .checkBox_div input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: -25%;
+    height: 2ex;
+    width: 2ex;
+    background-color: #F6F6F6;
+    border-radius: 4px;
+    margin-left: 0.5em;
+    top: -2px;
+    position: relative;
+ }
 /************* Multiple - Category - CSS ***********/
 .categories{
-    margin: 15px 0px;
+    margin: 0px 0px 15px;
+    padding-top: 15px;
 }
 .categories .category_box{
     text-align: center;
@@ -468,7 +675,7 @@ header .mobile_menu .mobile_body ul li a{
 footer{
     position: sticky;
     bottom: 0px;
-    z-index: 9999999999;
+    z-index: 99;
 }
 footer .footer_list{
     background: var(--whiteColor);

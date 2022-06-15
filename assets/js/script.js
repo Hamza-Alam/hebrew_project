@@ -39,3 +39,16 @@ $(".open_mobile_menu").click(function(){
     $("header").css("overflow","hidden")
   }
 })
+$(".logo").click(function(){
+  $(".main_page").addClass("changed_position");
+})
+$(".enrollemnt_button").click(function(){
+  $(".main_page").removeClass("changed_position");
+})
+$(".password_div i").click(function(){
+  if($(".password_div input").attr("type")=="password"){
+    $(".password_div input").attr("type","text")
+  } else{
+    $(".password_div input").attr("type","password")
+  }
+})
